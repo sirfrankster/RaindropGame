@@ -1,13 +1,14 @@
 class Raindrop {
-   PVector loc, vel, acc;
+   PVector loc, vel, acc;  //declare variables
    float diam;
    
 
 Raindrop(float x, float y) {
-  loc = new PVector(x,y);
-  vel = newPVector(random(-2,2), random(-2, 2);
+  loc = new PVector(x,y);  //set values for variables
+  vel = newPVector(random(-2,2), random(-2, 2));
   acc= new PVector(0.0001,.00002);
   diam = 15;
+}
 }
 
 void display() {
@@ -30,5 +31,4 @@ boolean isInContactWith(PVector c) {
     e = false;
   }
     return e;
-}
 }
