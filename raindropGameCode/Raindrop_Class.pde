@@ -9,3 +9,9 @@ Raindrop(float x, float y) {
   acc= new PVector(0.0001,.00002);
   diam = 15;
 }
+
+void display() {
+  fill(0,0,255);
+  noStroke();
+  ellipse(loc.x,loc.y,diam,diam);
+}
