@@ -15,3 +15,20 @@ void display() {
   noStroke();
   ellipse(loc.x,loc.y,diam,diam);
 }
+
+void reset() {
+  loc.y = 0;
+  vel.set(0,9);
+}
+
+boolean isInContactWith(PVector c) {
+  float d = dist(c.loc)<diam/2 +c.diam/2;
+  boolean e;
+  if(d<diam/2) {
+    e=true;
+  } else {
+    e = false;
+  }
+    return e;
+}
+}
