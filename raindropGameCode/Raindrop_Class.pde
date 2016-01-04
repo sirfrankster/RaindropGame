@@ -14,7 +14,7 @@ class Raindrop {
     acc = new PVector(0, random(.2));
     loc = new PVector(locx, locy);
     diam = 20;
-    img = loadImage("umbrella.png");
+    img = loadImage("hail.png");
   }
 
   void display() {
