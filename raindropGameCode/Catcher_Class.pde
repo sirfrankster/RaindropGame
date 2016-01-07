@@ -13,6 +13,6 @@ class Catcher {  //declare variables
   void display() {
     fill(0, 50, 200);  //fill color
     //ellipse(mouseX, mouseY, diam, diam);
-    image(img, mouseX, mouseY, diam, diam);  image moves where the mouse is
+    image(img, mouseX, mouseY, diam, diam);  //image moves where the mouse is
   }
 }

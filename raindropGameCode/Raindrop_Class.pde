@@ -21,7 +21,7 @@ class Raindrop {  //declare variables
     fill(255, 255, 255, t); //fill display screen
     noStroke();
 
-    image(img, loc.x - 50, loc.y -50, diam, diam); image of "hail" movement downward
+    image(img, loc.x - 50, loc.y -50, diam, diam); //image of "hail" movement downward
     
     //ellipse(loc.x, loc.y, diam, diam);
   }
