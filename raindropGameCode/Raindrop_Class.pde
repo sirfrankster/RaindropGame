@@ -1,4 +1,4 @@
-class Raindrop {
+class Raindrop {  //declare variables
   PVector loc;
   PVector vel, acc;
   int diam; 
@@ -8,7 +8,7 @@ class Raindrop {
   int num;
   PImage img;
 
-  Raindrop(float locx, float locy) {  
+  Raindrop(float locx, float locy) {  //set values for variables
     t = random(200, 255);
     vel = new PVector(0, random(1, 3));
     acc = new PVector(0, random(.2));
@@ -18,20 +18,20 @@ class Raindrop {
   }
 
   void display() {
-    fill(255, 255, 255, t);
+    fill(255, 255, 255, t); //fill display screen
     noStroke();
 
-    image(img, loc.x - 50, loc.y -50, diam, diam);
+    image(img, loc.x - 50, loc.y -50, diam, diam); image of "hail" movement downward
     
     //ellipse(loc.x, loc.y, diam, diam);
   }
 
-  void fall() {
+  void fall() {  //coding for the hail to fall
     loc.y += vel.y;
-    vel.add(acc);
+    vel.add(acc);  //adding velocity to hail going down
   }
 
-  void reset() {
+  void reset() {  //reset hail after it hits 0
     loc.y = 0;
     vel.y = 0;
   }
@@ -47,6 +47,6 @@ class Raindrop {
     } else {
       p = true;
     }
-    return p;
+    return p;  //returns hail back on top once it is in contact with umbrella
   }
 }

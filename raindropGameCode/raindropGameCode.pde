@@ -2,16 +2,16 @@ PVector mouse;   //declare a P
 int count = 20;
 int caught = 0;
 //Raindrop [] x = new Raindrop[count];
-ArrayList<Raindrop> drops = new ArrayList<Raindrop>();
+ArrayList<Raindrop> drops = new ArrayList<Raindrop>();  //arraylist
 
 
-Catcher c;
+Catcher c;  //catcher class
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
 // You can start out by just using the single Raindrop as you test
 
 
-void setup() {
+void setup() {  //set values for variables
   c = new Catcher();
   size(1200, 800);
   mouse = new PVector();   //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
@@ -26,14 +26,16 @@ void setup() {
 void draw() {
 
   if ( drops.size() <2000) {
-    drops.add(new Raindrop(random(width), 0));
+    drops.add(new Raindrop(random(width), 0));  //adds raindrops at a random location on the x axis which is the top of the screen
   }
 
   mouse.set(mouseX, mouseY);             //set value of mouse as mouseX,mouseY
-  background(0, 200, 255);
-  c.display();
+  background(0, 200, 255);  //set background
+  textSize(30);  //set text size
+  c.display();  //  //display catcher
+  text(caught,width/2,height/2);  //display score at the center of the screen
 
-  for (int i = drops.size()-1; i >= 0; i--) {
+  for (int i = drops.size()-1; i >= 0; i--) {  //raindrop coding
     Raindrop x = drops.get(i);
     x.fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
     x.display();      //display the raindrop
